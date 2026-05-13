@@ -1,7 +1,7 @@
 {
-  "name": "chatgpt-desktop-linux",
+  "name": "deepseek-linux",
   "version": "1.0.2",
-  "description": "A simple and efficient desktop client for ChatGPT.",
+  "description": "A simple and efficient desktop client for DeepSeek.",
   "main": "src/main.js",
   "type": "module",
   "scripts": {
@@ -12,20 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evildevill/chatgpt-desktop-linux.git"
+    "url": "git+https://github.com/evildevill/deepseek-linux.git"
   },
   "keywords": [
     "electron",
-    "chatgpt",
+    "deepseek",
     "desktop",
     "linux"
   ],
   "author": "evildevill",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/evildevill/chatgpt-desktop-linux/issues"
+    "url": "https://github.com/evildevill/deepseek-linux/issues"
   },
-  "homepage": "https://github.com/evildevill/chatgpt-desktop-linux#readme",
+  "homepage": "https://github.com/evildevill/deepseek-linux#readme",
   "dependencies": {
     "electron-context-menu": "^4.1.1"
   },
@@ -36,8 +36,8 @@
     "prettier": "^3.4.2"
   },
   "build": {
-    "productName": "ChatGPT",
-    "appId": "com.evildevill.chatgptdesktoplinux",
+    "productName": "DeepSeek",
+    "appId": "com.evildevill.deepseeklinux",
     "linux": {
       "target": "snap",
       "icon": "assets/icon.png",

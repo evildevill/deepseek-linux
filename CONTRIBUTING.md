@@ -1,14 +1,14 @@
 ### 🤝 **Contributing**
 
-We welcome contributions to make **ChatGPT Desktop** even better! Here's how you can contribute:
+We welcome contributions to make **DeepSeek Desktop** even better! Here's how you can contribute:
 
 1. **Report Issues**:
-   - Found a bug or have a feature request? Open an issue on our [GitHub Issues page](https://github.com/evildevill/chatgpt-desktop-linux/issues).
+   - Found a bug or have a feature request? Open an issue on our [GitHub Issues page](https://github.com/evildevill/deepseek-linux/issues).
 
 2. **Fork the Repository**:
    - Clone the project to your local machine:
      ```bash
-     git clone https://github.com/evildevill/chatgpt-desktop-linux.git
+     git clone https://github.com/evildevill/deepseek-linux.git
      ```
 
 3. **Make Changes**:
@@ -29,4 +29,4 @@ We welcome contributions to make **ChatGPT Desktop** even better! Here's how you
 - Suggest new features or improvements.
 - Share feedback on usability and performance.
 
-Thank you for your contributions and support! Together, we can build an amazing ChatGPT desktop experience.
+Thank you for your contributions and support! Together, we can build an amazing DeepSeek desktop experience.

@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url';
 import electronContextMenu from 'electron-context-menu';
 
 // Constants
-const APP_URL = 'https://chatgpt.com';
+const APP_URL = 'https://chat.deepseek.com';
+const DEEPSEEK_PROTOCOL = 'deepseek://';
 const ICON_PATH = path.join(
   path.dirname(fileURLToPath(import.meta.url)),
   'assets/icon.png'
@@ -67,15 +68,18 @@ function createMainWindow() {
  * @returns {string|null} The extracted URL or null.
  */
 function processCommandLineArgs(args) {
-  const httpsRegex = /^https:\/\/www\.chatgpt\.com\/.*/;
-  const chatgptRegex = /^chatgpt:\/\//;
+  const httpsRegex = /^https:\/\/chat\.deepseek\.com(?:[/?#].*)?$/;
+  const deepseekRegex = /^deepseek:\/\//;
 
   for (const arg of args) {
     if (httpsRegex.test(arg)) {
       return arg;
     }
-    if (chatgptRegex.test(arg)) {
-      return APP_URL + arg.substring(11);
+    if (deepseekRegex.test(arg)) {
+      const deepseekPath = arg
+        .substring(DEEPSEEK_PROTOCOL.length)
+        .replace(/^\/+/, '');
+      return `${APP_URL}/${deepseekPath}`;
     }
   }
   return null;
@@ -104,7 +108,7 @@ function handleSecondInstance(event, args) {
  */
 async function initializeApp() {
   // Set the app name
-  app.setName('ChatGPT');
+  app.setName('DeepSeek');
 
   // Request single instance lock
   const gotLock = app.requestSingleInstanceLock();
