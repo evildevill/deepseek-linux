@@ -75,7 +75,7 @@ function processCommandLineArgs(args) {
       return arg;
     }
     if (deepseekRegex.test(arg)) {
-      return APP_URL + arg.substring(12);
+      return APP_URL + arg.substring(11);
     }
   }
   return null;
