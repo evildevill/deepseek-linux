@@ -68,7 +68,7 @@ function createMainWindow() {
  * @returns {string|null} The extracted URL or null.
  */
 function processCommandLineArgs(args) {
-  const httpsRegex = /^https:\/\/chat\.deepseek\.com(\/.*)?$/;
+  const httpsRegex = /^https:\/\/chat\.deepseek\.com(\/.*|\?.*|#.*)?$/;
   const deepseekRegex = /^deepseek:\/\//;
 
   for (const arg of args) {
