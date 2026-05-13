@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url';
 import electronContextMenu from 'electron-context-menu';
 
 // Constants
-const APP_URL = 'https://chat.deepseek.com/';
+const APP_URL = 'https://chat.deepseek.com';
+const DEEPSEEK_PROTOCOL = 'deepseek://';
 const ICON_PATH = path.join(
   path.dirname(fileURLToPath(import.meta.url)),
   'assets/icon.png'
@@ -75,7 +76,10 @@ function processCommandLineArgs(args) {
       return arg;
     }
     if (deepseekRegex.test(arg)) {
-      return APP_URL + arg.substring(11);
+      const deepseekPath = arg
+        .substring(DEEPSEEK_PROTOCOL.length)
+        .replace(/^\/+/, '');
+      return `${APP_URL}/${deepseekPath}`;
     }
   }
   return null;
